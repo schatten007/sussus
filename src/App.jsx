@@ -1,10 +1,12 @@
+import Player from "./components/Player";
+import Song from "./components/Song";
+import "./styles/app.scss"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <h1>Yeet</h1>
-      </header>
+      <Song/>
+      <Player/>
     </div>
   );
 }
