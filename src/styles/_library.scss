@@ -1,0 +1,64 @@
+.library-container {
+  width: 15%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  box-shadow: 2px 0px 50px rgb(165, 165, 165);
+  transform: translateX(-100%);
+
+  h2 {
+    margin: 2rem 0 2rem 1rem;
+  }
+  .libsong-container {
+    display: flex;
+    padding: 1rem;
+    height: 15%;
+    img {
+      width: 40%;
+    }
+    .track-desc {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+
+      h3 {
+        font-size: 1rem;
+        color: rgb(97, 97, 97);
+      }
+      h4 {
+        font-size: 0.6rem;
+        color: rgb(161, 161, 161);
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(170, 252, 252);
+    }
+  }
+
+  .active {
+    background-color: rgb(156, 244, 250);
+  }
+}
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.display {
+  transition: 0.5s;
+  transform: translate(0%);
+}
+.hide {
+  transition: 0.5s;
+  transform: translate(-100%);
+}
