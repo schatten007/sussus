@@ -1,23 +1,11 @@
+import { changeActiveSong, playNewAudio } from "../utils";
 
 const LibraryTrack = ({songs, song, setCurrentSong, setPlaying, audioRef, playing, setSongs}) => {
-    const libSongHandler = () => {
-        setCurrentSong(song);
+    const libSongHandler = async () => {
+        await setCurrentSong(song);
 
-        //Change active song
-        setSongs(songs.map( s => {
-            if (s.id === song.id) return {...s, active: true};
-            else return {...s, active: false};
-        }));
-
-        if(playing){
-            //Only plays the audio after loading it up from external source
-            const playPromise = audioRef.current.play();
-            if(playPromise !== undefined){
-                playPromise.then(()=>{
-                    audioRef.current.play();
-                })
-            }
-        }
+        changeActiveSong(songs, song, setSongs);
+        playNewAudio(playing, audioRef);
     }
     return (
         <div className={`libsong-container ${song.active ? 'active' : ''}`} onClick={libSongHandler}>

@@ -17,3 +17,11 @@ h4 {
 @import "./song";
 @import "./library";
 @import "./navbar";
+
+.App {
+  transition: all 0.5s ease;
+}
+
+.lib-active {
+  margin-left: 30%;
+}
