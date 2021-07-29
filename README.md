@@ -1,2 +1,2 @@
-Yeet!
-Having fun coding after a very long time 😃
+Done for now!
+Plan to add some functionality in the near future :)
